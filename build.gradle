@@ -1,4 +1,4 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// Top-level build file
 buildscript {
     ext {
         sdkVersion = 35
@@ -10,21 +10,13 @@ buildscript {
         composeVersion = "1.6.7"
         material3Version = "1.2.1"
     }
-
-    repositories {
-        google()
-        mavenCentral()
-        maven { url "https://jitpack.io" }
-    }
-
     dependencies {
         classpath "com.android.tools.build:gradle:8.2.2"
-        classpath "com.google.dagger:hilt-android-gradle-plugin:2.50"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:2.0.0"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:2.50"
     }
 }
 
-// Fixed the plugin block to avoid conflicts with buildscript
 plugins {
     id 'com.android.application' version '8.2.2' apply false
     id 'com.android.library' version '8.2.2' apply false
@@ -32,15 +24,6 @@ plugins {
     id 'com.google.dagger.hilt.android' version '2.50' apply false
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        maven { url "https://jitpack.io" }
-    }
-}
-
-// Fixed the clean task syntax for modern Gradle
 tasks.register('clean', Delete) {
     delete rootProject.layout.buildDirectory
 }
