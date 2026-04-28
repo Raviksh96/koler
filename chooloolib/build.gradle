@@ -1,9 +1,6 @@
 plugins {
-    id "com.android.library"
-    id "kotlin-android"
-    id "kotlin-kapt"
-    id 'com.google.dagger.hilt.android'
-    id "org.jetbrains.kotlin.android"
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
 }
 
 android {
@@ -11,79 +8,20 @@ android {
     compileSdk rootProject.ext.sdkVersion
 
     defaultConfig {
-        targetSdk rootProject.ext.sdkVersion
         minSdk rootProject.ext.minSdkVersion
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
-        }
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_21
-        targetCompatibility JavaVersion.VERSION_21
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_21.toString()
-    }
-
-    kotlin { jvmToolchain(21) }
-    dataBinding { enabled true }
-    kapt { correctErrorTypes true }
-    buildFeatures { viewBinding true }
-    hilt { enableAggregatingTask true }
+    kotlinOptions { jvmTarget = '17' }
 }
 
 dependencies {
-    kapt(
-            "androidx.hilt:hilt-compiler:1.2.0",
-            "com.google.dagger:hilt-compiler:${rootProject.ext.hiltVersion}"
-    )
-
-    testImplementation(
-            "junit:junit:4.13.2",
-            "androidx.room:room-testing:2.6.1"
-    )
-
-    androidTestImplementation(
-            "androidx.test:runner:1.5.2",
-            "androidx.test.ext:junit:1.1.5",
-            "androidx.compose.ui:ui-test-junit4:1.6.0",
-            "androidx.test.espresso:espresso-core:3.5.1"
-    )
-
-    implementation(
-            // ktx
-            "androidx.fragment:fragment-ktx:1.6.2",
-            "androidx.activity:activity-ktx:1.8.1",
-            "androidx.preference:preference-ktx:1.2.1",
-            "androidx.navigation:navigation-ui-ktx:2.7.6",
-            "androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0",
-            "androidx.navigation:navigation-fragment-ktx:2.7.6",
-            "androidx.core:core-ktx:${rootProject.ext.coreKtxVersion}",
-
-            "androidx.compose.ui:ui:1.6.0",
-            "androidx.compose.material3:material3:1.2.0",
-            "androidx.compose.material:material:1.6.0",
-            "dev.sasikanth:colorsheet:1.0.1",
-            "com.squareup.picasso:picasso:2.8",
-            "io.reactivex.rxjava3:rxjava:3.1.8",
-            "androidx.preference:preference:1.2.1",
-            "io.github.l4digital:fastscroll:2.0.1",
-            "io.reactivex.rxjava3:rxandroid:3.0.0",
-            "com.google.android.material:material:1.11.0",
-            "com.github.abdularis:circularimageview:1.5",
-            "com.daimajia.androidanimations:library:2.4@aar",
-            "com.pushtorefresh.storio3:content-resolver:3.0.0",
-            "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3",
-            "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3",
-            "com.google.dagger:hilt-android:${rootProject.ext.hiltVersion}",
-            "androidx.appcompat:appcompat:${rootProject.ext.appCompatVersion}",
-    )
+    implementation "androidx.core:core-ktx:${rootProject.ext.coreKtxVersion}"
+    implementation "androidx.appcompat:appcompat:${rootProject.ext.appCompatVersion}"
+    // Updated path for colorsheet
+    implementation 'com.github.sasikanth:colorsheet:1.0.1'
 }
