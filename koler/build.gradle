@@ -16,7 +16,6 @@ android {
         targetSdk rootProject.ext.sdkVersion
         versionCode 82
         versionName "v1.6.1"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -36,31 +35,20 @@ android {
         jvmTarget = '17'
     }
 
-    buildFeatures {
-        compose true
-    }
-    
-    // composeOptions is REMOVED because Kotlin 2.0.0 handles this automatically
+    buildFeatures { compose true }
 }
 
 dependencies {
     implementation "androidx.core:core-ktx:${rootProject.ext.coreKtxVersion}"
     implementation "androidx.appcompat:appcompat:${rootProject.ext.appCompatVersion}"
-    
-    // Compose with BOM
     implementation platform('androidx.compose:compose-bom:2024.05.00')
     implementation 'androidx.compose.ui:ui'
     implementation 'androidx.compose.material3:material3'
     implementation "androidx.navigation:navigation-compose:2.7.7"
-
-    // Hilt
     implementation "com.google.dagger:hilt-android:${rootProject.ext.hiltVersion}"
     kapt "com.google.dagger:hilt-android-compiler:${rootProject.ext.hiltVersion}"
-
-    // RxJava 3
     implementation 'io.reactivex.rxjava3:rxjava:3.1.8'
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
-    
     implementation project(':kontacts')
     implementation project(':chooloolib')
 }
