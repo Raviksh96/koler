@@ -2,16 +2,29 @@
 <resources>
     <color name="colorPrimary">#6750A4</color>
     <color name="colorOnPrimary">#FFFFFF</color>
-    
     <color name="colorSecondary">#625B71</color>
     <color name="colorOnSecondary">#FFFFFF</color>
-    
     <color name="colorBackground">#FEF7FF</color>
     <color name="colorOnBackground">#1D1B20</color>
     <color name="colorSurface">#FEF7FF</color>
     <color name="colorOnSurface">#1D1B20</color>
 
-    <color name="purple_500">#6750A4</color>
+    <color name="colorPrimaryDark">#D0BCFF</color>
+    <color name="colorOnPrimaryDark">#381E72</color>
+    <color name="colorSecondaryDark">#CCC2DC</color>
+    <color name="colorOnSecondaryDark">#332D41</color>
+    <color name="colorBackgroundDark">#1D1B20</color>
+    <color name="colorOnBackgroundDark">#E6E1E5</color>
+    <color name="colorSurfaceDark">#1D1B20</color>
+    <color name="colorOnSurfaceDark">#E6E1E5</color>
+
+    <color name="material_dark_primary">#D0BCFF</color>
+    <color name="material_dark_on_primary">#381E72</color>
+    <color name="material_dark_secondary">#CCC2DC</color>
+    <color name="purple_200">#BB86FC</color>
+    <color name="purple_500">#6200EE</color>
     <color name="purple_700">#3700B3</color>
     <color name="teal_200">#03DAC5</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
 </resources>
