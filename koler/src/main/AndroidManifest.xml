@@ -1,14 +1,35 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.koler">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    ```
 
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/Theme.Material3.Expressive">
-        
-        <!-- Other components -->
+#### 2. File: `kontacts/src/main/AndroidManifest.xml`
+**Update the first line to look like this:**
+```xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    ```
 
-    </application>
+#### 3. File: `chooloolib/src/main/AndroidManifest.xml`
+**Update the first line to look like this:**
+```xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    ```
 
-</manifest>
+---
+
+### Step 2: Fix the Kotlin Compilation (The Nuclear Option)
+Since we removed the `colorsheet` library, we must comment out any code that tries to use it. Based on the original structure of `koler`, this is the file you need to edit:
+
+#### File: `chooloolib/src/main/java/com/chooloo/www/chooloolib/utils/ColorUtils.kt`
+*(Note: If the path is slightly different, look for any file in `chooloolib` containing the word `ColorSheet`)*
+
+**Find and comment out these sections:**
+
+```kotlin
+// 1. Comment out the import at the top
+// import dev.sasikanth.colorsheet.ColorSheet
+
+// 2. Look for any function calling ColorSheet and comment it out
+/*
+fun showColorPicker(...) {
+    ColorSheet().colorPicker(...)
+}
+*/
