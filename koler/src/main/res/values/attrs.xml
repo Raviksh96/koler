@@ -2,7 +2,7 @@
 <resources>
     <attr name="colorBackground" format="color" />
     
-    <attr name="hideScrollbar" format="boolean" />
-    <attr name="bubbleColor" format="color" />
-    <attr name="handleColor" format="color" />
+    <attr name="view_state" format="integer" />
+    <attr name="textColor" format="color" />
+    <attr name="avatarBackgroundColor" format="color" />
 </resources>
