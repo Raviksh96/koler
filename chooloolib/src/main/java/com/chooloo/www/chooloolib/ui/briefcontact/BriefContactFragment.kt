@@ -82,7 +82,7 @@ open class BriefContactFragment @Inject constructor() : BaseFragment<BriefContac
                 binding.briefContactImage.backgroundTintList = null
                 binding.briefContactImage.imageTintList = null
                 binding.briefContactImage.isVisible = true
-                Picasso.get(baseActivity).load(it).into(binding.briefContactImage)
+                Picasso.get().load(it).into(binding.briefContactImage)
             }
 
             callEvent.observe(this@BriefContactFragment) {
