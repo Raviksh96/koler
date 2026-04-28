@@ -22,6 +22,7 @@ android {
 dependencies {
     implementation "androidx.core:core-ktx:${rootProject.ext.coreKtxVersion}"
     implementation "androidx.appcompat:appcompat:${rootProject.ext.appCompatVersion}"
-    // Updated path for colorsheet
-    implementation 'com.github.sasikanth:colorsheet:1.0.1'
+    
+    // NUCLEAR OPTION: Dependency removed because JitPack is returning 401 Unauthorized
+    // implementation 'com.github.sasikanth:colorsheet:1.0.1'
 }
