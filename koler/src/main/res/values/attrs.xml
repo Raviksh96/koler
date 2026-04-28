@@ -10,5 +10,4 @@
     <attr name="colorSurfaceVariant" format="color" />
     <attr name="colorOnSurfaceVariant" format="color" />
 
-    <attr name="view_state" format="integer" />
-</resources>
+    </resources>
