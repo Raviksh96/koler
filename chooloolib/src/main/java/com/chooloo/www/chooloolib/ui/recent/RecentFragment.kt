@@ -46,7 +46,7 @@ class RecentFragment @Inject constructor() : BaseFragment<RecentViewState>() {
 
             imageUri.observe(this@RecentFragment) {
                 binding.recentContactImage.isVisible = true
-                Picasso.with(baseActivity).load(it).into(binding.recentContactImage)
+                Picasso.get(baseActivity).load(it).into(binding.recentContactImage)
             }
 
             name.observe(this@RecentFragment) {
