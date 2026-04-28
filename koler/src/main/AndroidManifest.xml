@@ -1,35 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    ```
 
-#### 2. File: `kontacts/src/main/AndroidManifest.xml`
-**Update the first line to look like this:**
-```xml
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    ```
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_OWN_CALLS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
 
-#### 3. File: `chooloolib/src/main/AndroidManifest.xml`
-**Update the first line to look like this:**
-```xml
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    ```
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Koler">
 
----
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Koler.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+            <intent-filter>
+                <action android:name="android.intent.action.DIAL" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="tel" />
+            </intent-filter>
+        </activity>
 
-### Step 2: Fix the Kotlin Compilation (The Nuclear Option)
-Since we removed the `colorsheet` library, we must comment out any code that tries to use it. Based on the original structure of `koler`, this is the file you need to edit:
+        <service
+            android:name=".services.InCallServiceImpl"
+            android:permission="android.permission.BIND_INCALL_SERVICE"
+            android:exported="true">
+            <meta-data
+                android:name="android.telecom.IN_CALL_SERVICE_UI"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.telecom.InCallService" />
+            </intent-filter>
+        </service>
 
-#### File: `chooloolib/src/main/java/com/chooloo/www/chooloolib/utils/ColorUtils.kt`
-*(Note: If the path is slightly different, look for any file in `chooloolib` containing the word `ColorSheet`)*
-
-**Find and comment out these sections:**
-
-```kotlin
-// 1. Comment out the import at the top
-// import dev.sasikanth.colorsheet.ColorSheet
-
-// 2. Look for any function calling ColorSheet and comment it out
-/*
-fun showColorPicker(...) {
-    ColorSheet().colorPicker(...)
-}
-*/
+    </application>
+</manifest>
