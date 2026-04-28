@@ -188,7 +188,7 @@ class CallNotification @Inject constructor(
             .setContentTitle(phoneAccount?.displayString ?: call.number)
             .setSmallIcon(R.drawable.icon_full_144)
             .setContentIntent(_contentPendingIntent)
-            .setColor(colors.getAttrColor(R.color.colorSecondary))
+            .setColor(colors.getAttrColor(R.color.com.chooloo.www.koler.R.color.colorSecondary))
             .setContentText(strings.getString(call.state.stringRes))
 
         if (call.state !in arrayOf(DISCONNECTED, DISCONNECTING)) {
