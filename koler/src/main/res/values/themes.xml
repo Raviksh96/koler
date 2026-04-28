@@ -1,0 +1,25 @@
+<resources>
+    <!-- Light Theme -->
+    <style name="Theme.Material3.Light" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">@color/material_light_primary</item>
+        <item name="colorOnPrimary">@color/material_light_on_primary</item>
+        <item name="colorSecondary">@color/material_light_secondary</item>
+        <item name="colorOnSecondary">@color/material_light_on_secondary</item>
+        <item name="colorBackground">@color/material_light_background</item>
+        <item name="colorOnBackground">@color/material_light_on_background</item>
+        <item name="colorSurface">@color/material_light_surface</item>
+        <item name="colorOnSurface">@color/material_light_on_surface</item>
+    </style>
+
+    <!-- Dark Theme -->
+    <style name="Theme.Material3.Dark" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">@color/material_dark_primary</item>
+        <item name="colorOnPrimary">@color/material_dark_on_primary</item>
+        <item name="colorSecondary">@color/material_dark_secondary</item>
+        <item name="colorOnSecondary">@color/material_dark_on_secondary</item>
+        <item name="colorBackground">@color/material_dark_background</item>
+        <item name="colorOnBackground">@color/material_dark_on_background</item>
+        <item name="colorSurface">@color/material_dark_surface</item>
+        <item name="colorOnSurface">@color/material_dark_on_surface</item>
+    </style>
+</resources>
