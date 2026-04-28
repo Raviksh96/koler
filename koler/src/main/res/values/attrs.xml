@@ -4,6 +4,9 @@
     <attr name="colorPrimary" format="color" />
     <attr name="colorSecondary" format="color" />
     <attr name="colorOnSurface" format="color" />
+    <attr name="colorBackgroundVariant" format="color" />
+    <attr name="colorOnBackgroundVariant" format="color" />
+
     
     <attr name="colorSecondaryContainer" format="color" />
     <attr name="colorOnSecondaryContainer" format="color" />
