@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="ChoolooTheme" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -7,12 +8,9 @@
         
         <item name="android:windowBackground">@color/colorBackground</item>
         <item name="android:colorBackground">@color/colorBackground</item>
+        
         <item name="colorSurface">@color/colorSurface</item>
         <item name="colorOnSurface">@color/colorOnSurface</item>
-
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="ChoolooTheme.Dark" parent="Theme.Material3.Dark.NoActionBar">
@@ -23,11 +21,13 @@
         
         <item name="android:windowBackground">@color/colorBackgroundDark</item>
         <item name="android:colorBackground">@color/colorBackgroundDark</item>
+        
         <item name="colorSurface">@color/colorSurfaceDark</item>
         <item name="colorOnSurface">@color/colorOnSurfaceDark</item>
-
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:windowLightStatusBar">false</item>
     </style>
+    
+    <style name="Theme.Koler" parent="ChoolooTheme" />
+    <style name="Theme.Koler.NoActionBar" parent="ChoolooTheme" />
+    <style name="ChoolooTheme.NoActionBar" parent="ChoolooTheme" />
+
 </resources>
