@@ -18,4 +18,7 @@
     <attr name="handleColor" format="color" />
     <attr name="textColor" format="color" />
     <attr name="avatarBackgroundColor" format="color" />
+
+    <attr name="digit" format="string" />
+    <attr name="activated" format="boolean" />
 </resources>
