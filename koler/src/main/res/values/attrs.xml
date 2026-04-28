@@ -4,13 +4,18 @@
     <attr name="colorPrimary" format="color" />
     <attr name="colorSecondary" format="color" />
     <attr name="colorOnSurface" format="color" />
-    <attr name="colorBackgroundVariant" format="color" />
-    <attr name="colorOnBackgroundVariant" format="color" />
-
     
     <attr name="colorSecondaryContainer" format="color" />
     <attr name="colorOnSecondaryContainer" format="color" />
     <attr name="colorSurfaceVariant" format="color" />
     <attr name="colorOnSurfaceVariant" format="color" />
 
-    </resources>
+    <attr name="colorBackgroundVariant" format="color" />
+    <attr name="colorOnBackgroundVariant" format="color" />
+
+    <attr name="hideScrollbar" format="boolean" />
+    <attr name="bubbleColor" format="color" />
+    <attr name="handleColor" format="color" />
+    <attr name="textColor" format="color" />
+    <attr name="avatarBackgroundColor" format="color" />
+</resources>
