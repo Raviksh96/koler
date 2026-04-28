@@ -17,6 +17,8 @@
         <item name="colorOnSurfaceVariant">#49454F</item>
         
         <item name="colorBackground">@color/colorBackground</item>
+        <item name="colorBackgroundVariant">@color/colorBackground</item>
+<item name="colorOnBackgroundVariant">@color/colorOnBackground</item>
 
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
@@ -29,6 +31,8 @@
         <item name="colorSecondary">@color/colorSecondaryDark</item>
         <item name="colorOnSecondary">@color/colorOnSecondaryDark</item>
         <item name="android:colorBackground">@color/colorBackgroundDark</item>
+        <item name="colorBackgroundVariant">@color/colorBackgroundDark</item>
+<item name="colorOnBackgroundVariant">@color/colorOnBackgroundDark</item>
         <item name="android:windowBackground">@color/colorBackgroundDark</item>
         <item name="colorSurface">@color/colorSurfaceDark</item>
         <item name="colorOnSurface">@color/colorOnSurfaceDark</item>
