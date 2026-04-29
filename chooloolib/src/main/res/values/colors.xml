@@ -49,4 +49,10 @@
     <!-- Scrim (dimming overlay) -->
     <color name="md3_scrim">#000000</color>
 
+    <!-- Call action colors — used by call.xml and contact.xml layouts -->
+<color name="positive">#1B6B32</color>
+<color name="on_positive">#FFFFFF</color>
+<color name="negative">#BA1A1A</color>
+<color name="on_negative">#FFFFFF</color>
+
 </resources>
