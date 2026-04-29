@@ -36,6 +36,10 @@ android {
 }
 
 dependencies {
+    implementation project(':chooloolib')  // ← ADD THIS LINE
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:${rootProject.ext.kotlinVersion}"
+    // ... rest of your existing dependencies
     implementation "org.jetbrains.kotlin:kotlin-stdlib:${rootProject.ext.kotlinVersion}"
     implementation "androidx.core:core-ktx:${rootProject.ext.coreKtxVersion}"
     implementation "androidx.appcompat:appcompat:${rootProject.ext.appCompatVersion}"
