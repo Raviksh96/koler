@@ -71,6 +71,4 @@ dependencies {
     implementation "com.google.dagger:hilt-android:${rootProject.ext.hiltVersion}"
     ksp           "com.google.dagger:hilt-compiler:${rootProject.ext.hiltVersion}"
 
-    // Contacts module
-    implementation project(':kontacts')
 }
