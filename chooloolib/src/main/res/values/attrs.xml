@@ -7,4 +7,5 @@
     <attr name="fastScrollerThumbColor" format="color|reference" />
     <attr name="fastScrollerTextPadding" format="dimension" />
     <attr name="fastScrollerIconSize"   format="dimension" />
+    <attr name="textSize" format="dimension" />
 </resources>
