@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="colorSecondaryContainer" format="color" />
-    <attr name="colorOnSecondaryContainer" format="color" />
-    <attr name="colorSurfaceVariant" format="color" />
-    <attr name="colorOnSurfaceVariant" format="color" />
-    <attr name="colorPrimary" format="color" />
-    <attr name="colorOnSurface" format="color" />
+    <!-- IndicatorFastScroll attrs re-declared because JitPack
+         AAR builds don't always export them into the merged resources -->
+    <attr name="bubbleTextColor"        format="color|reference" />
+    <attr name="fastScrollerIconColor"  format="color|reference" />
+    <attr name="fastScrollerThumbColor" format="color|reference" />
+    <attr name="fastScrollerTextPadding" format="dimension" />
+    <attr name="fastScrollerIconSize"   format="dimension" />
 </resources>
