@@ -1,17 +1,24 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
+    id 'com.google.devtools.ksp'
     id 'com.google.dagger.hilt.android'
 }
 
 android {
-    namespace "com.chooloo.www.kontacts"
+    namespace 'com.chooloo.android.kontacts'
     compileSdk rootProject.ext.sdkVersion
 
     defaultConfig {
-        minSdk rootProject.ext.minSdkVersion
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        minSdk    rootProject.ext.minSdkVersion
+        targetSdk rootProject.ext.sdkVersion
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
     }
 
     compileOptions {
@@ -19,26 +26,24 @@ android {
         targetCompatibility JavaVersion.VERSION_17
     }
 
-    kotlinOptions { jvmTarget = '17' }
-
-    java {
-        toolchain { languageVersion = JavaLanguageVersion.of(17) }
+    kotlinOptions {
+        jvmTarget = '17'
     }
 
-    buildFeatures { 
+    buildFeatures {
         viewBinding true
-        dataBinding true 
     }
 }
 
 dependencies {
-    kapt "com.google.dagger:hilt-compiler:${rootProject.ext.hiltVersion}"
-    kapt "androidx.room:room-compiler:2.6.1"
-    implementation "androidx.room:room-runtime:2.6.1"
-    implementation "androidx.room:room-ktx:2.6.1"
-    implementation project(":chooloolib")
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:${rootProject.ext.kotlinVersion}"
     implementation "androidx.core:core-ktx:${rootProject.ext.coreKtxVersion}"
     implementation "androidx.appcompat:appcompat:${rootProject.ext.appCompatVersion}"
-    implementation "com.google.android.material:material:1.12.0"
+    implementation "com.google.android.material:material:${rootProject.ext.materialVersion}"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${rootProject.ext.lifecycleVersion}"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:${rootProject.ext.lifecycleVersion}"
+    implementation "androidx.recyclerview:recyclerview:${rootProject.ext.recyclerViewVersion}"
+
     implementation "com.google.dagger:hilt-android:${rootProject.ext.hiltVersion}"
+    ksp           "com.google.dagger:hilt-compiler:${rootProject.ext.hiltVersion}"
 }
