@@ -148,7 +148,7 @@
         <item name="shapeAppearance">@style/ShapeAppearance.Koler.Circle</item>
         <item name="android:minWidth">72dp</item>
         <item name="android:minHeight">72dp</item>
-        <item name="textAppearance">@style/TextAppearance.Koler.TitleLarge</item>
+        <item name="android:textAppearance">@style/TextAppearance.Koler.TitleLarge</item>
     </style>
 
     <!-- Call FAB — MD3 Expressive large FAB -->
