@@ -1,43 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="ChoolooTheme" parent="Theme.Material3.Light.NoActionBar">
-        <item name="android:windowLightStatusBar">true</item>
+    <!--
+        Base application theme — Material Design 3 Expressive.
+        Uses Material3 DayNight as parent so it automatically switches
+        light/dark based on system setting.
+        Dynamic Color (Material You) is applied at runtime in KolerApp.kt
+        by calling DynamicColors.applyToActivitiesIfAvailable(this).
+    -->
+    <style name="Theme.Koler" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Primary brand color (used when Dynamic Color is not available) -->
+        <item name="colorPrimary">@color/md3_primary</item>
+        <item name="colorOnPrimary">@color/md3_on_primary</item>
+        <item name="colorPrimaryContainer">@color/md3_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/md3_on_primary_container</item>
+
+        <!-- Secondary -->
+        <item name="colorSecondary">@color/md3_secondary</item>
+        <item name="colorOnSecondary">@color/md3_on_secondary</item>
+        <item name="colorSecondaryContainer">@color/md3_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/md3_on_secondary_container</item>
+
+        <!-- Tertiary -->
+        <item name="colorTertiary">@color/md3_tertiary</item>
+        <item name="colorOnTertiary">@color/md3_on_tertiary</item>
+        <item name="colorTertiaryContainer">@color/md3_tertiary_container</item>
+        <item name="colorOnTertiaryContainer">@color/md3_on_tertiary_container</item>
+
+        <!-- Error -->
+        <item name="colorError">@color/md3_error</item>
+        <item name="colorOnError">@color/md3_on_error</item>
+        <item name="colorErrorContainer">@color/md3_error_container</item>
+        <item name="colorOnErrorContainer">@color/md3_on_error_container</item>
+
+        <!-- Background / Surface -->
+        <item name="android:colorBackground">@color/md3_background</item>
+        <item name="colorOnBackground">@color/md3_on_background</item>
+        <item name="colorSurface">@color/md3_surface</item>
+        <item name="colorOnSurface">@color/md3_on_surface</item>
+        <item name="colorSurfaceVariant">@color/md3_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/md3_on_surface_variant</item>
+        <item name="colorOutline">@color/md3_outline</item>
+        <item name="colorOutlineVariant">@color/md3_outline_variant</item>
+
+        <!-- MD3 Expressive: rounded corners everywhere -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Koler.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Koler.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Koler.Large</item>
+
+        <!-- MD3 Expressive: Typography -->
+        <item name="textAppearanceDisplayLarge">@style/TextAppearance.Koler.DisplayLarge</item>
+        <item name="textAppearanceHeadlineLarge">@style/TextAppearance.Koler.HeadlineLarge</item>
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.Koler.TitleLarge</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.Koler.BodyLarge</item>
+        <item name="textAppearanceLabelLarge">@style/TextAppearance.Koler.LabelLarge</item>
+
+        <!-- Status bar / navigation bar: transparent, let content go edge-to-edge -->
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:fontFamily">@font/google_sans_medium</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
 
-        <item name="elevationOverlayEnabled">false</item>
-        <item name="bottomSheetDialogTheme">@style/Chooloo.BottomSheet</item>
+        <!-- MD3 Expressive spring motion -->
+        <item name="motionDurationShort1">75</item>
+        <item name="motionDurationShort2">150</item>
+        <item name="motionDurationMedium1">200</item>
+        <item name="motionDurationMedium2">300</item>
+        <item name="motionDurationLong1">400</item>
+        <item name="motionDurationLong2">500</item>
+        <item name="motionEasingEmphasizedInterpolator">@interpolator/m3_sys_motion_easing_emphasized</item>
 
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorOnPrimary">@color/on_primary</item>
-        <item name="colorPrimaryContainer">@color/primary_container</item>
-        <item name="colorOnPrimaryContainer">@color/on_primary_container</item>
-
-        <item name="colorSecondary">@color/secondary</item>
-        <item name="colorOnSecondary">@color/on_secondary</item>
-        <item name="colorSecondaryContainer">@color/secondary_container</item>
-        <item name="colorOnSecondaryContainer">@color/on_secondary_container</item>
-
-        <item name="colorTertiary">@color/tertiary</item>
-        <item name="colorOnTertiary">@color/on_tertiary</item>
-        <item name="colorTertiaryContainer">@color/tertiary_container</item>
-        <item name="colorOnTertiaryContainer">@color/on_tertiary_container</item>
-
-        <item name="colorError">@color/error</item>
-        <item name="colorOnError">@color/on_error</item>
-        <item name="colorErrorContainer">@color/error_container</item>
-        <item name="colorOnErrorContainer">@color/on_error_container</item>
-
-        <item name="android:colorBackground">@color/background</item>
-        <item name="colorOnBackground">@color/on_background</item>
-
-        <item name="colorSurface">@color/surface</item>
-        <item name="colorOnSurface">@color/on_surface</item>
-        <item name="colorSurfaceVariant">@color/surface_variant</item>
-        <item name="colorOnSurfaceVariant">@color/on_surface_variant</item>
-
-        <item name="colorBackgroundVariant">@color/background_variant</item>
-        <item name="colorOnBackgroundVariant">@color/on_background_variant</item>
+        <!-- Bottom sheet (used for dialpad, call options etc.) -->
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Koler.BottomSheetDialog</item>
     </style>
+
+    <!-- ================================================ -->
+    <!-- SHAPES — MD3 Expressive uses very rounded corners -->
+    <!-- ================================================ -->
+
+    <style name="ShapeAppearance.Koler.Small" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="ShapeAppearance.Koler.Medium" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="ShapeAppearance.Koler.Large" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">28dp</item>
+    </style>
+
+    <!-- Full circle — used for FABs and dial button -->
+    <style name="ShapeAppearance.Koler.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- Wide pill — the new MD3 Expressive "squircle" button shape -->
+    <style name="ShapeAppearance.Koler.Pill" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50dp</item>
+    </style>
+
+    <!-- ================================================ -->
+    <!-- TYPOGRAPHY                                        -->
+    <!-- ================================================ -->
+
+    <style name="TextAppearance.Koler.DisplayLarge" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextAppearance.Koler.HeadlineLarge" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="TextAppearance.Koler.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.Koler.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="TextAppearance.Koler.LabelLarge" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.1</item>
+    </style>
+
+    <!-- ================================================ -->
+    <!-- BUTTON STYLES                                     -->
+    <!-- ================================================ -->
+
+    <!-- Primary filled button — MD3 Expressive pill shape -->
+    <style name="Widget.Koler.Button.Primary" parent="Widget.Material3.Button">
+        <item name="shapeAppearance">@style/ShapeAppearance.Koler.Pill</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+    </style>
+
+    <!-- Dial pad button — large circle -->
+    <style name="Widget.Koler.Button.Dial" parent="Widget.Material3.Button.TonalButton">
+        <item name="shapeAppearance">@style/ShapeAppearance.Koler.Circle</item>
+        <item name="android:minWidth">72dp</item>
+        <item name="android:minHeight">72dp</item>
+        <item name="textAppearance">@style/TextAppearance.Koler.TitleLarge</item>
+    </style>
+
+    <!-- Call FAB — MD3 Expressive large FAB -->
+    <style name="Widget.Koler.ExtendedFab.Call" parent="Widget.Material3.ExtendedFloatingActionButton.Icon.Primary">
+        <item name="shapeAppearance">@style/ShapeAppearance.Koler.Pill</item>
+        <item name="android:backgroundTint">@color/md3_call_green</item>
+        <item name="tint">@android:color/white</item>
+    </style>
+
+    <!-- End call FAB -->
+    <style name="Widget.Koler.ExtendedFab.EndCall" parent="Widget.Material3.ExtendedFloatingActionButton.Icon.Primary">
+        <item name="shapeAppearance">@style/ShapeAppearance.Koler.Pill</item>
+        <item name="android:backgroundTint">@color/md3_error</item>
+        <item name="tint">@android:color/white</item>
+    </style>
+
+    <!-- ================================================ -->
+    <!-- BOTTOM SHEET                                      -->
+    <!-- ================================================ -->
+
+    <style name="ThemeOverlay.Koler.BottomSheetDialog" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.Koler.BottomSheet</item>
+    </style>
+
+    <style name="Widget.Koler.BottomSheet" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="shapeAppearance">@style/ShapeAppearance.Koler.BottomSheet</item>
+    </style>
+
+    <style name="ShapeAppearance.Koler.BottomSheet" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">28dp</item>
+        <item name="cornerSizeTopRight">28dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <!-- ================================================ -->
+    <!-- LEGACY ALIAS — keeps old references working       -->
+    <!-- Any XML that still says @style/ChoolooTheme       -->
+    <!-- will automatically use the new MD3 theme.         -->
+    <!-- ================================================ -->
+    <style name="ChoolooTheme" parent="Theme.Koler" />
+
 </resources>
