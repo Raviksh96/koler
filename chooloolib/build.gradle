@@ -65,7 +65,7 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout:${rootProject.ext.constraintLayoutVersion}"
 
     // Fast scroller
-    implementation 'com.reddit.indicatorfastscroll:fast-scroll:1.1.0'
+    implementation 'com.github.reddit:IndicatorFastScroll:1.4.0'
 
     // Hilt (DI)
     implementation "com.google.dagger:hilt-android:${rootProject.ext.hiltVersion}"
