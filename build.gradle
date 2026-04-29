@@ -6,9 +6,9 @@ buildscript {
         minSdkVersion   = 26
 
         // Library versions
-        kotlinVersion          = "2.1.20"
+        kotlinVersion          = "2.0.21"
         hiltVersion            = "2.57.1"
-        kspVersion             = "2.1.20-1.0.31"
+        kspVersion             = "2.0.21-1.0.28"
         coreKtxVersion         = "1.15.0"
         appCompatVersion       = "1.7.0"
         materialVersion        = "1.12.0"
